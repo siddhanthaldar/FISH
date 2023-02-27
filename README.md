@@ -43,7 +43,7 @@ tensorboard --logdir exp_local
 sudo apt update
 sudo apt install libosmesa6-dev libgl1-mesa-glx libglfw3
 ```
-- Install [Meta-World](https://github.com/Farama-Foundation/Metaworld)
+- Download the Meta-World benchmark suite and its demonstrations from [here](https://osf.io/4w69f/?view_only=e29b9dc9ea474d038d533c2245754f0c). Install the simulation environment using the following command - 
   ```
   pip install -e /path/to/dir/metaworld
   ```
