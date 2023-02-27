@@ -2,7 +2,7 @@
 
 This is a repository containing the code for the paper "Teach a Robot to FISH: Versatile Imitation from One Minute of Demonstrations".
 
-[main_figure.pdf](https://github.com/siddhanthaldar/FISH/files/10835557/main_figure.pdf)
+![main_figure](https://user-images.githubusercontent.com/25313941/221458118-4c6f7ea5-abda-40db-be99-b02b0828b06d.png)
 
 ## Instructions
 - Set up Environment
