@@ -1,0 +1,37 @@
+# @package suite
+defaults:
+  - _self_
+  - handgym_task@_global_: cardslide
+
+
+suite: handgym
+name: 'handgym'
+task_name: ${task_name}
+# task settings
+frame_stack: 1
+action_repeat: 1
+
+save_snapshot: true
+discount: 0.99
+hidden_dim: 4068
+
+# train settings
+num_train_frames: 2010 
+num_seed_frames: 200
+
+# eval
+eval_every_frames: 700
+num_eval_episodes: 10
+
+task_make_fn:
+  _target_: suite.handgym.make
+  name: ${task_name}
+  robot_name: 'allegro'
+  host_address: '172.24.71.211'
+  camera_num: 1
+  height: 84
+  width: 84
+  frame_stack: ${suite.frame_stack}
+  action_repeat: ${suite.action_repeat}
+  seed: ${seed}
+  

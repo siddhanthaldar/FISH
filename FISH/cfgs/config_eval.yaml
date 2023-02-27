@@ -1,0 +1,53 @@
+defaults:
+  - _self_
+  - agent: potil_vinn_offset
+  - suite: robotgym
+  - override hydra/launcher: submitit_local
+
+# Root Dir
+root_dir: '/path/to/dir/FISH'
+
+nstep: 3
+# misc
+seed: 2
+device: cuda
+save_video: true
+# save_train_video: false
+use_tb: true
+
+# experiment
+obs_type: 'pixels'
+experiment: eval_${suite.name}_${task_name}_seed_${seed}
+
+# Number of evaluation trajectories
+num_eval: 20
+
+# Start points path
+random_start: False
+eval_starts: '${root_dir}/FISH/eval_starts/${suite.name}_${obs_type}/${task_name}'
+
+num_demos: 2
+expert_dataset: '${root_dir}/FISH/expert_demos/${suite.name}/${task_name}/expert_demos.pkl'
+
+# Load weights
+bc_weight: '${root_dir}/FISH/weights/${suite.name}_${obs_type}/${task_name}/bc.pt'
+residual_weight: '${root_dir}/FISH/weights/${suite.name}_${obs_type}/${task_name}/weight.pt'
+
+# Train with BC loss
+bc_regularize: false
+bc_weight_type: 'qfilter' # linear, qfilter
+
+# Load weights
+load_bc_weight: true
+load_residual_weight: true
+
+hydra:
+  run:
+    dir: ./exp_local/${now:%Y.%m.%d}/${now:%H%M%S}_${experiment}
+  sweep:
+    dir: ./exp/${now:%Y.%m.%d}/${now:%H%M}_${experiment}
+    subdir: ${hydra.job.num}
+  launcher:
+    tasks_per_node: 1
+    nodes: 1
+    submitit_folder: ./exp/${now:%Y.%m.%d}/${now:%H%M%S}_${experiment}/.slurm

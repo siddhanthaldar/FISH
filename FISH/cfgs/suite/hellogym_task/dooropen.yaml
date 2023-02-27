@@ -1,0 +1,6 @@
+defaults:
+  - _self_
+
+task_name: DoorOpen-v1
+num_train_frames_bc: 5000 
+num_train_frames_vinn: 50

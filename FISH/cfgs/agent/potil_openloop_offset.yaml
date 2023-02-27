@@ -1,0 +1,28 @@
+# @package agent
+_target_: agent.potil_openloop_offset.POTILVINNAgent
+obs_shape: ??? # to be specified later
+action_shape: ??? # to be specified later
+device: ${device}
+lr: 1e-4
+critic_target_tau: 0.01
+update_every_steps: 2
+use_tb: ${use_tb}
+num_expl_steps: 0
+hidden_dim: ${suite.hidden_dim}
+feature_dim:  512 # 384 for MVP, 512 for everything else
+stddev_schedule: 0.1
+stddev_clip: 0.3
+augment: True
+rewards: sinkhorn_cosine
+sinkhorn_rew_scale: 200
+update_target_every: 100000
+auto_rew_scale: True
+auto_rew_scale_factor: 10
+suite_name: ${suite.name}
+obs_type: ${obs_type}
+encoder_type: ${encoder_type}
+bc_weight_type: ${bc_weight_type}
+bc_weight_schedule: 'linear(1.0,0.1,20000)'
+pretrained: False
+offset_scale_factor: 0.2
+offset_mask: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]

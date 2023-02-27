@@ -1,0 +1,3 @@
+# @package agent
+_target_: agent.openloop.Openloop
+obs_shape: ??? # to be specified later

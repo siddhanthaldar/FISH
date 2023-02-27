@@ -1,0 +1,12 @@
+# @package agent
+_target_: agent.vinn.VINN
+obs_shape: ??? # to be specified later
+device: ${device}
+lr: 3e-4
+use_tb: ${use_tb}
+feature_dim: 512
+augment: True
+obs_type: ${obs_type}
+encoder_type: ${encoder_type} # resnet18, small
+pretrained: False
+image_size: 84 # 84, 224

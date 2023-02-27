@@ -1,0 +1,13 @@
+defaults:
+  - params
+  - _self_
+
+task_name: RobotFlipBagel-v1
+num_train_frames_bc: 2000
+num_train_frames_vinn: 50
+pitch: 0
+roll: 136
+x_limit : [1.5, 2.0]
+y_limit : [0.54, 1.20]
+z_limit: [1.44, 2.5]
+keep_gripper_closed: true
