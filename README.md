@@ -35,6 +35,7 @@ This is a repository containing the code for the paper "Teach a Robot to FISH: V
 ```
 tensorboard --logdir exp_local
 ```
+- To use pre-trained encoders, you must install [MVP](https://github.com/ir413/mvp) and [R3M](https://github.com/facebookresearch/r3m) using instructions provided in the respective repositories.
 
 ## Instructions to set up simulation environment
 - Install [Mujoco](http://www.mujoco.org/) based on the instructions given [here](https://github.com/facebookresearch/drqv2).
@@ -48,3 +49,8 @@ sudo apt install libosmesa6-dev libgl1-mesa-glx libglfw3
   pip install -e /path/to/dir/metaworld
   ```
 - To run experiments on the Meta-World Benchmark, you may use the above commands with the suite name replaced by `metaworld`.
+
+## Bibtex
+```
+
+```
