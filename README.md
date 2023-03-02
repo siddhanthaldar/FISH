@@ -3,7 +3,7 @@
 
 This is a repository containing the code for the paper "Teach a Robot to FISH: Versatile Imitation from One Minute of Demonstrations".
 
-![main](https://user-images.githubusercontent.com/25313941/222333390-ad424f34-7990-4483-9877-47bb39e5dbe7.gif)
+![main_figure](https://user-images.githubusercontent.com/25313941/222460948-cb72d5bb-12bc-4ce1-bf2b-cf90f542a344.png)
 
 ## Instructions
 - Set up Environment
