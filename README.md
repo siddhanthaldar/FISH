@@ -53,5 +53,10 @@ sudo apt install libosmesa6-dev libgl1-mesa-glx libglfw3
 
 ## Bibtex
 ```
-
+@article{haldar2023teach,
+         title={Teach a Robot to FISH: Versatile Imitation from One Minute of Demonstrations},
+         author={Haldar, Siddhant and Pari, Jyothish and Rai, Anant and Pinto, Lerrel},
+         journal={arXiv preprint arXiv:2303.01497},
+         year={2023}
+}
 ```
