@@ -1,5 +1,5 @@
 # Teach a Robot to FISH: Versatile Imitation from One Minute of Demonstrations
-[[Arxiv]]() [[Project page and videos]](https://fast-imitation.github.io/)
+[[Arxiv]](https://arxiv.org/abs/2303.01497) [[Project page and videos]](https://fast-imitation.github.io/)
 
 This is a repository containing the code for the paper "Teach a Robot to FISH: Versatile Imitation from One Minute of Demonstrations".
 
