@@ -10,7 +10,9 @@ import torch.nn as nn
 from torch.utils.data import IterableDataset
 import pickle
 
-from holobot.robot.allegro.allegro_kdl import AllegroKDL
+# from holobot.robot.allegro.allegro_kdl import AllegroKDL
+# from holodex.robot.allegro_kdl import AllegroKDL
+from .allegro_kdl import AllegroKDL
 
 
 def episode_len(episode):
@@ -169,6 +171,7 @@ class ReplayBuffer(IterableDataset):
 class ExpertReplayBuffer(IterableDataset):
     def __init__(self, dataset_path, num_demos, obs_type):
         with open(dataset_path, 'rb') as f:
+            # ipdb.set_trace()
             if obs_type == 'pixels':
                 obses, _, actions, _ = pickle.load(f)
                 # _, obses, _, actions, _ = pickle.load(f)

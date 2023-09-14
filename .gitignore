@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# experiment & pkl files
+FISH/exp_local/
+FISH/expert_demos/
