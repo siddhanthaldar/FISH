@@ -367,7 +367,8 @@ class WorkspaceIL:
 
 @hydra.main(config_path='cfgs', config_name='config')
 def main(cfg):
-	from train_robot_ssl_hand import WorkspaceIL as W
+	# from train_robot_ssl_hand import WorkspaceIL as W
+	from train_hand import WorkspaceIL as W
 	workspace = W(cfg)
 	
 	# Load weights
